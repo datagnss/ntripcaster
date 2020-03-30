@@ -5,7 +5,7 @@ WORKDIR /root
 COPY ntripcaster.tar.gz /root
 RUN set -ex \
 	&& mkdir -p /etc/ntripcaster \
-	&& tar -zxvf ntripcaster.tar.gz /usr/local/bin/ \
+	&& tar -zxvf ntripcaster.tar.gz -C / \
 	&& chmod +x /usr/local/bin/ntripcaster/bin/ntripcaster \
 	&& chmod +x /usr/local/bin/ntripcaster/bin/casterwatch \
 	&& chmod +x /usr/local/bin/ntripcaster/sbin/ntripdaemon 
